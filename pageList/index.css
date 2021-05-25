@@ -1,0 +1,11 @@
+.article-entry ul .link{
+  list-style-type:none;
+  height:30px;
+  line-height:30px;
+  a{
+    font-size:15px;
+    
+    color:#000;
+  }
+}
+  
