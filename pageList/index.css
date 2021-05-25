@@ -4,6 +4,11 @@
   line-height:30px;
  
 }
+.article-entry ul  li:before{
+   border:none;
+  width:0;
+  height:0;
+  }
 .article-entry ul  a{
     font-size:15px;
     
