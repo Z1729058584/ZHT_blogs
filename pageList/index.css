@@ -1,11 +1,12 @@
-.article-entry ul .link{
+.article-entry ul {
   list-style-type:none;
   height:30px;
   line-height:30px;
-  a{
+ 
+}
+.article-entry ul  a{
     font-size:15px;
     
     color:#000;
   }
-}
   
