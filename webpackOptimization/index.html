@@ -177,7 +177,32 @@
                                 </header>
 
                                 <div class="article-entry" itemprop="articleBody">
-                                    webpack优化
+                                   const lessLoader = {
+                                     test: /\.less$/,
+                                       use: [
+                                         MiniCssExtractPlugin.loader,
+                                         'css-loader?minimize',
+                                       // css-loader将编译出来的代码再次编译成为符合CommonJS的代码
+                                        {
+                                          loader: 'typings-for-css-modules-loader',
+                                        options: {
+                                          modules: true, // 使用css modules
+                                           namedExport: true, // 类名导出
+                                           camelCase: true, // 支持驼峰
+                                           // sass: true, // 是否使用sass,
+                                           less: true,
+                                           localIdentName: '[name]__[local]__[hash:base64:5]', // 定义类名
+                                         },
+                                        },
+                                         {
+                                           loader: 'less-loader',
+                                           options: {
+                                             modifyVars: {
+                                               hd: '1px',
+                                             },
+                                           },
+                                         },
+                                    module:{rules:[lessLoader]}
                                 </div>
                                 <div class="article-info article-info-index">
 
