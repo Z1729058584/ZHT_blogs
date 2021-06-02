@@ -200,26 +200,29 @@
                                       const [state, dispatch] = useReducer(reducer, initialState);
                                   </div>
                                     <div> 
-                                   " return(
-                                        EditorContext.Provider value={{ state, dispatch }}>
-                                          HashRouter>
+                                        return( </div>
+                                      <div > "<" EditorContext.Provider value={{ state, dispatch }}">" </div>
+                                         <div> "<" HashRouter
                                              Suspense
                                                 fallback={
                                                   <div className="loading">
                                                     <Spin size="large" />
                                                   </div>
                                                 }
-                                              >
-                                          Switch>
-                                            Route path="/firstPage" component={FirstPage} />
-                                            Route path="/secondPage" component={SecondPage} />
-                                            /Route>
-                                            /Switch>
-                                          /Suspense>
-                                          /HashRouter>
-                                          /EditorContext.Provider >
+                                              ">"
+                                          </div>
+                                        <div> "<"  Switch>
+                                          "<"  Route path="/firstPage" component={FirstPage} />
+                                           "<" Route path="/secondPage" component={SecondPage} />
+                                           "<" /Route>
+                                           < /Switch ">"
+                                            </div> 
+                                            <div>
+                                         "<" /Suspense>
+                                          "<"/HashRouter>
+                                         "<" /EditorContext.Provider >
                                         
-                            ) "
+                            ) 
                                   </div>
                       <div>组件中利用dispatch将修改的状态数据分发到reducer里面</div>
                       <div>import React, { Component, useContext } from 'react';
@@ -234,7 +237,7 @@
      });<div>
                                 </div>
                                 <div class="article-info article-info-index">
-                                   <a href="/ZHT_blogs/webpackBuild">&lt; 滚动到下一页请求数据</a>
+                                   <a href="/ZHT_blogs/scrollRequest">&lt; 滚动到下一页请求数据</a>
                                 </div>
                             </div>
                         </article>
