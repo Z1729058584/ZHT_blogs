@@ -200,8 +200,8 @@
                                       const [state, dispatch] = useReducer(reducer, initialState);
                                   </div>
                                     <div> 
-                                        "return (
-                                        '<EditorContext.Provider value={{ state, dispatch }}>
+                                       <-- return (
+                                        <EditorContext.Provider value={{ state, dispatch }}>
                                           <HashRouter>
                                              <Suspense
                                                 fallback={
@@ -217,9 +217,9 @@
                                             </Switch>
                                           </Suspense>
                                           </HashRouter>
-                                          </EditorContext.Provider >'
+                                          </EditorContext.Provider >
                                           )
-                            "
+                            -->
                                   </div>
                       <div>组件中利用dispatch将修改的状态数据分发到reducer里面</div>
                       <div>import React, { Component, useContext } from 'react';
