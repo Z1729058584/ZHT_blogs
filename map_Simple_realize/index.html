@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+ <meta charset="utf-8">
+   
+    <title>map简单实现</title>
+ 
+
+  
+  
+    <link rel="stylesheet" type="text/css" href="/ZHT_blogs/./main.0cf68a.css">
+    <link rel="stylesheet" type="text/css" href="./index.css">
+    <style type="text/css">
+        #container.show {
+            background: linear-gradient(200deg, #a0cfe4, #e8c37e);
+        }
+    </style>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RC520HB3WQ"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RC520HB3WQ');
+</script>
+
+</head>
+
+<body>
+    <div id="container" q-class="show:isCtnShow">
+        <canvas id="anm-canvas" class="anm-canvas"></canvas>
+        <div class="left-col" q-class="show:isShow">
+
+            <div class="overlay" style="background: #4d4d4d"></div>
+            <div class="intrude-less">
+                <header id="header" class="inner">
+                    <a href="/ZHT_blogs/" class="profilepic">
+                        <img src="../img/zh.jpg" class="js-avatar show" style="width: 100%;height: 100%;opacity: 1;">
+                    </a>
+                    <hgroup>
+                        <h1 class="header-author"><a href="/ZHT_blogs/">MrZhang</a></h1>
+                    </hgroup>
+
+                    <p class="header-subtitle">Song_of_Azure</p>
+
+
+                    <nav class="header-menu">
+                        <ul>
+
+                            <li><a href="/ZHT_blogs/">主页</a></li>
+
+                            <li><a href="/ZHT_blogs/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+
+                        </ul>
+                    </nav>
+                    <nav class="header-smart-menu">
+
+
+                        <a href="/ZHT_blogs/pageList" target="_blank" rel="noopener">文章列表</a>
+
+
+
+                        <a q-on="click: openSlider(e, 'friends')" href="javascript:void(0)" target="_blank" rel="noopener">友链</a>
+
+
+
+                        <a q-on="click: openSlider(e, 'aboutme')" href="javascript:void(0)" target="_blank" rel="noopener">关于我</a>
+
+
+                    </nav>
+                    <nav class="header-nav">
+                        <div class="social">
+
+                            <a class="github" target="_blank" href="https://github.com/Z1729058584" title="github"><i class="icon-github"></i></a>
+
+                            <a class="weibo" target="_blank" href="https://weibo.com/6211103359/profile?topnav=1&wvr=6" title="weibo"><i class="icon-weibo"></i></a>
+
+                            <a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+
+                            <a class="zhihu" target="_blank" href="https://www.zhihu.com/people/18883723954" title="zhihu"><i class="icon-zhihu"></i></a>
+
+                        </div>
+                    </nav>
+                </header>
+            </div>
+
+        </div>
+        <div class="mid-col" q-class="show:isShow,hide:isShow|isFalse">
+
+            <nav id="mobile-nav">
+                <div class="overlay js-overlay" style="background: #4d4d4d"></div>
+                <div class="btnctn js-mobile-btnctn">
+                    <div class="slider-trigger list" q-on="click: openSlider(e)"><i class="icon icon-sort"></i></div>
+                </div>
+                <div class="intrude-less">
+                    <header id="header" class="inner">
+                        <div class="profilepic">
+                            <img src="" class="js-avatar">
+                        </div>
+                        <hgroup>
+                            <h1 class="header-author js-header-author">MrZhang</h1>
+                        </hgroup>
+
+                        <p class="header-subtitle"><i class="icon icon-quo-left"></i>Song_of_Azure<i class="icon icon-quo-right"></i></p>
+                        <nav class="header-nav">
+                            <div class="social">
+
+                                <a class="github" target="_blank" href="#" title="github"><i class="icon-github"></i></a>
+
+                                <a class="weibo" target="_blank" href="#" title="weibo"><i class="icon-weibo"></i></a>
+
+                                <a class="rss" target="_blank" href="#" title="rss"><i class="icon-rss"></i></a>
+
+                                <a class="zhihu" target="_blank" href="#" title="zhihu"><i class="icon-zhihu"></i></a>
+
+                            </div>
+                        </nav>
+
+                        <nav class="header-menu js-header-menu">
+                            <ul style="width: 50%">
+
+
+                                <li style="width: 50%"><a href="/ZHT_blogs/">主页</a></li>
+
+                                <li style="width: 50%"><a href="/ZHT_blogs/tags/%E9%9A%8F%E7%AC%94/">随笔</a></li>
+
+                            </ul>
+                        </nav>
+                    </header>
+                </div>
+                <div class="mobile-mask" style="display:none" q-show="isShow"></div>
+            </nav>
+
+            <div id="wrapper" class="body-wrap">
+                <div class="menu-l">
+                    <div class="canvas-wrap">
+                        <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
+                    </div>
+                    <div id="js-content" class="content-ll">
+
+
+                        <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+                            <div class="article-inner">
+
+                                <header class="article-header">
+
+
+                                    <h1 itemprop="name">
+                                        <a class="article-title" href="#">map简单实现</a>
+                                    </h1>
+
+
+
+                                    <a href="/ZHT_blogs/2018/11/21/hello-world/" class="archive-article-date">
+                                        <time datetime="2018-11-21T03:05:22.222Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-12-13</time>
+                                    </a>
+
+                                </header>
+
+                                <div class="article-entry" itemprop="articleBody">
+<div><span >// 使用reduce实现map</span></div><div>Array.prototype.myMap = <span  >function</span>(fn, callbackThis) </div><div><span >// console.log(callbackThis, 'callbackThis'); call(_callbackThis,</span></div><div><span  >var</span> _callbackThis = callbackThis || <span  >null</span>;</div><div><span  >return</span> <span  >this</span>.reduce((prev, cur, index, array) <span  >=&gt;</span> </div><div>prev[index] = fn(cur, index, array);</div><div><span  >return</span> prev;</div><div> []);</div><br><div>Array.prototype.myMap = <span  >function</span>(cb, thisValue) </div><div>console.log(thisValue, <span   >'thisValue'</span>);</div><div><span  >if</span> (<span  >typeof</span> cb !== <span   >'function'</span>) </div><div><span  >throw</span> <span  >new</span> Error(<span   >'第一个参数应当为函数'</span>);</div><div><span  >const</span> res = [];</div><div><span  >if</span> (<span  >this</span>.length) </div><div><span  >for</span> (<span  >let</span> i = <span   >0</span>; i &lt; <span  >this</span>.length; i++) </div><div><span >//遍历数组时，将每次回调函数的返回值添加到res中</span></div><div>res.push(cb.call(thisValue, <span  >this</span>[i], i, <span  >this</span>));</div><div><span  >return</span> res;</div><div><span  >const</span> newArray = [<span   >1</span>, <span   >2</span>, <span   >3</span>].myMap((item, index) <span  >=&gt;</span> </div><div>item += <span >1</span>;</div><div><span  >return</span> item;</div><div>);</div><br><div>console.log(newArray, <span >'newArray'</span>);</div>
+
+                             
+                                </div>
+                                 <div class="article-info article-info-index">
+                                   <a href="/ZHT_blogs/spaApplication">&lt; 单页面应用</a>
+                                  
+                                </div>
+                            </div>
+                        </article>
+                        <aside class="wrap-side-operation">
+                            <div class="mod-side-operation">
+                                <div class="jump-container" id="js-jump-container" style="display:none;">
+                                    <a href="javascript:void(0)" target="_blank" rel="noopener" class="mod-side-operation__jump-to-top">
+                                        <i class="icon-font icon-back"></i>
+                                    </a>
+                                    <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                                        <i class="icon-font icon-plane jump-plane"></i>
+                                    </div>
+                                </div>
+
+
+                            </div>
+                        </aside>
+
+                    </div>
+                </div>
+            </div>
+            <footer id="footer">
+                <div class="outer">
+                    <div id="footer-info">
+                        <div class="footer-left">
+                            &copy; 2018 MrZhang
+                        </div>
+
+                    </div>
+                </div>
+            </footer>
+        </div>
+       
+
+
+
+
+    </div>
+    <!-- Root element of PhotoSwipe. Must have class pswp. -->
+
+    </div>
+</body>
+
+</html>
